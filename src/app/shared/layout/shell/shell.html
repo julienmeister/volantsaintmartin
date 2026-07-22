@@ -1,0 +1,46 @@
+<div class="shell">
+  <!-- Top bar with brand and mobile menu trigger. -->
+  <header class="topbar">
+    @if (isMobile()) {
+      <button mat-icon-button (click)="sidenav.toggle()" aria-label="Ouvrir le menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+    }
+
+    <img src="/images/logo.png" alt="Logo VSM" class="topbar-logo-left" />
+
+    <h1 class="topbar-title">V.S.M. Badminton Club - <b>Bienvenue !</b></h1>
+
+    <img src="/images/logo-name.png" alt="Logo club" class="topbar-logo-right" />
+  </header>
+
+  <mat-sidenav-container class="body" [style.background]="'transparent'">
+    <mat-sidenav
+      #sidenav
+      class="sidenav"
+      [mode]="isMobile() ? 'over' : 'side'"
+      [opened]="!isMobile()"
+      [style.background-color]="'#455F8C'"
+    >
+      <mat-nav-list>
+        @for (item of navItems; track item.route) {
+          <!-- On mobile, close the overlay drawer after navigation. -->
+          <a
+            mat-list-item
+            [routerLink]="item.route"
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: item.route === '/' }"
+            (click)="isMobile() && sidenav.close()"
+          >
+            <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+            <span matListItemTitle>{{ item.label }}</span>
+          </a>
+        }
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="content">
+      <router-outlet />
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
