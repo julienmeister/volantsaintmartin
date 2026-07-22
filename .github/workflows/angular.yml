@@ -33,7 +33,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/volantsaintmartin
+          path: dist/volantsaintmartin/browser
+
 
   deploy:
     needs: build
