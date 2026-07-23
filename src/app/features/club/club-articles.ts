@@ -12,7 +12,6 @@ import {
 export type ClubArticle = {
   slug: string;
   title: string;
-  excerpt?: string;
   imageSrc: string;
   imageAlt?: string;
   previewText: string;
@@ -23,8 +22,6 @@ export const CLUB_ARTICLES: ClubArticle[] = [
   {
     slug: 'notre-histoire',
     title: 'Notre histoire',
-    excerpt:
-      'Le club a ete cree en 2007 par Xavier. Il a voulu creer ce club avec un esprit de camaraderie et une bonne humeur.',
     imageSrc: 'images/logo-name.png',
     imageAlt: 'Logo du Volant Saint Martin',
     previewText: NOTRE_HISTOIRE_INTRO,
@@ -32,8 +29,7 @@ export const CLUB_ARTICLES: ClubArticle[] = [
   },
   {
     slug: 'organisation-des-creneaux',
-    title: 'Organisation des creneaux',
-    excerpt: '',
+    title: 'Organisation des créneaux',
     imageSrc: 'images/logo-name.png',
     imageAlt: 'Terrain de badminton',
     previewText: ORGANISATION_CRENEAUX_INTRO,
@@ -42,7 +38,6 @@ export const CLUB_ARTICLES: ClubArticle[] = [
   {
     slug: 'le-bureau',
     title: 'Le bureau',
-    excerpt: '',
     imageSrc: 'images/logo-name.png',
     imageAlt: 'Membres du bureau',
     previewText: LE_BUREAU_INTRO,

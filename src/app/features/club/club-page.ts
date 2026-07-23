@@ -12,7 +12,6 @@ import { CLUB_ARTICLES } from './club-articles';
 export class ClubPage {
   readonly articleCards = CLUB_ARTICLES.map((article) => ({
     title: article.title,
-    excerpt: article.excerpt ?? '',
     articleText: article.previewText,
     imageSrc: article.imageSrc,
     imageAlt: article.imageAlt ?? article.title,

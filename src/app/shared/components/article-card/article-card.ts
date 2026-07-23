@@ -10,7 +10,6 @@ import { RouterLink } from '@angular/router';
 })
 export class ArticleCard {
   readonly title = input.required<string>();
-  readonly excerpt = input<string>('');
   readonly articleText = input<string>('');
   readonly imageSrc = input.required<string>();
   readonly imageAlt = input<string>('');
@@ -18,10 +17,6 @@ export class ArticleCard {
   readonly buttonLabel = input<string>('Voir plus');
 
   readonly previewText = computed(() => {
-    const fromExcerpt = this.normalizeText(this.excerpt());
-    if (fromExcerpt) {
-      return fromExcerpt;
-    }
 
     const fromArticle = this.normalizeText(this.articleText());
     if (!fromArticle) {
