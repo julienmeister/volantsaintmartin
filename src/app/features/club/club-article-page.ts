@@ -8,11 +8,7 @@ import { getClubArticleBySlug } from './club-articles';
   standalone: true,
   imports: [ArticlePage],
   template: `
-    <app-article-page
-      [article]="article()"
-      [backLink]="backLink"
-      [backLabel]="backLabel"
-    />
+    <app-article-page [article]="article()" [backLink]="backLink" [backLabel]="backLabel" />
   `,
 })
 export class ClubArticlePage {

@@ -19,7 +19,5 @@ export class ArticlePage {
   readonly backLink = input<string>('/');
   readonly backLabel = input<string>('Retour');
   readonly notFoundTitle = input<string>('Article introuvable');
-  readonly notFoundText = input<string>(
-    'Cet article n existe pas ou n est plus disponible.',
-  );
+  readonly notFoundText = input<string>('Cet article n existe pas ou n est plus disponible.');
 }

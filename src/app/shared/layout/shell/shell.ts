@@ -42,6 +42,6 @@ export class Shell {
     { label: 'AGENDA', icon: 'event', route: '/agenda' },
     { label: 'INFORMATIONS PRATIQUES', icon: 'fact_check', route: '/informations' },
     { label: "S'INSCRIRE", icon: 'person_add', route: '/inscription' },
-    { label: 'CONTACT', icon: 'mail', route: '/contact' }
+    { label: 'CONTACT', icon: 'mail', route: '/contact' },
   ];
 }

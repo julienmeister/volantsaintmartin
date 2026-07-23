@@ -1,8 +1,5 @@
 import { Type } from '@angular/core';
-import {
-  LE_BUREAU_INTRO,
-  LeBureauArticle,
-} from './articles/le-bureau-article/le-bureau-article';
+import { LE_BUREAU_INTRO, LeBureauArticle } from './articles/le-bureau-article/le-bureau-article';
 import {
   NOTRE_HISTOIRE_INTRO,
   NotreHistoireArticle,

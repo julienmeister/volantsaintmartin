@@ -125,7 +125,6 @@
   }
 }
 
-
 @media (max-width: 1024px) {
   .topbar {
     display: grid;
@@ -189,11 +188,10 @@
     padding: 20px 14px 16px 16px;
   }
   .sidenav .mat-mdc-list-item .mdc-list-item__primary-text {
-    font-size: 0.80rem;
+    font-size: 0.8rem;
     line-height: 1.15;
   }
 }
-
 
 @media (max-width: 768px) {
   .topbar {
