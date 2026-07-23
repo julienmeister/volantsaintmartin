@@ -1,0 +1,17 @@
+<section class="page">
+  <a class="back-link" [routerLink]="backLink()">{{ backLabel() }}</a>
+
+  @if (article(); as item) {
+    <div class="content-wrap">
+      <h2>{{ item.title }}</h2>
+      <div class="article-body">
+        <ng-container *ngComponentOutlet="item.component" />
+      </div>
+    </div>
+  } @else {
+    <div class="content-wrap">
+      <h2>{{ notFoundTitle() }}</h2>
+      <p>{{ notFoundText() }}</p>
+    </div>
+  }
+</section>

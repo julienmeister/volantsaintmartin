@@ -1,0 +1,12 @@
+<article class="article-card">
+  <a class="image-link" [routerLink]="link()" [attr.aria-label]="'Aller vers ' + title()">
+    <img [src]="imageSrc()" [alt]="imageAlt() || title()" loading="lazy" />
+  </a>
+
+  <div class="content">
+    <h3>{{ title() }}</h3>
+    <p>{{ previewText() }}</p>
+
+    <a class="see-more" [routerLink]="link()">{{ buttonLabel() }}</a>
+  </div>
+</article>

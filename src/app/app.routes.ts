@@ -12,6 +12,13 @@ export const routes: Routes = [
 			import('./features/club/club-page').then((m) => m.ClubPage),
 	},
 	{
+		path: 'club/articles/:slug',
+		loadComponent: () =>
+			import('./features/club/club-article-page').then(
+				(m) => m.ClubArticlePage,
+			),
+	},
+	{
 		path: 'entrainements',
 		loadComponent: () =>
 			import('./features/entrainements/entrainements-page').then(
