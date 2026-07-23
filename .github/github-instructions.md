@@ -11,3 +11,9 @@ Ce projet est le site web statique d'un club de badminton.
 - Concevoir une interface responsive et accessible.
 - Respecter la charte graphique du projet.
 - Ne modifier que ce qui est nécessaire pour répondre à la demande.
+
+## Charte graphique :
+- Couleur bandeau haut et latéral : #455F8C
+- Liseré autour du bandeau : #FF7F4A
+- Couleur fond de page : #FFFEFB
+- Police d’écriture : Verdana

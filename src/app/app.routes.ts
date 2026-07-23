@@ -33,6 +33,13 @@ export const routes: Routes = [
       import('./features/informations/informations-page').then((m) => m.InformationsPage),
   },
   {
+    path: 'informations/articles/:slug',
+    loadComponent: () =>
+      import('./features/informations/informations-article-page').then(
+        (m) => m.InformationsArticlePage,
+      ),
+  },
+  {
     path: 'inscription',
     loadComponent: () =>
       import('./features/inscription/inscription-page').then((m) => m.InscriptionPage),

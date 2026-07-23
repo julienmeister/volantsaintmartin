@@ -17,7 +17,6 @@ export class ArticleCard {
   readonly buttonLabel = input<string>('Voir plus');
 
   readonly previewText = computed(() => {
-
     const fromArticle = this.normalizeText(this.articleText());
     if (!fromArticle) {
       return '';

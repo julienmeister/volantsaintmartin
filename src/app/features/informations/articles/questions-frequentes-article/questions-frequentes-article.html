@@ -1,0 +1,28 @@
+<article class="article-content">
+  <header class="faq-header">
+    <p>{{ intro }}</p>
+  </header>
+
+  <div class="faq-list">
+    @for (faq of faqs; track faq.question; let index = $index) {
+      <section class="faq-card" [attr.aria-label]="'Question frequente ' + (index + 1)">
+        <button
+          type="button"
+          class="faq-trigger"
+          (click)="toggleFaq(index)"
+          [attr.aria-expanded]="isOpen(index)"
+          [attr.aria-controls]="'faq-answer-' + index"
+        >
+          <span class="faq-question">{{ faq.question }}</span>
+          <span class="chevron" [class.open]="isOpen(index)" aria-hidden="true"></span>
+        </button>
+
+        <div [id]="'faq-answer-' + index" class="faq-answer-wrap" [class.open]="isOpen(index)">
+          <div class="faq-answer-inner">
+            <p class="faq-answer" [innerHTML]="faq.answerHtml"></p>
+          </div>
+        </div>
+      </section>
+    }
+  </div>
+</article>
