@@ -1,0 +1,9 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-inscription-page',
+  standalone: true,
+  templateUrl: './inscription-page.html',
+  styleUrl: './inscription-page.scss',
+})
+export class InscriptionPage {}

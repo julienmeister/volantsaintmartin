@@ -26,9 +26,23 @@ export const routes: Routes = [
 			),
 	},
 	{
-		path: 'boutique',
+		path: 'agenda',
 		loadComponent: () =>
-			import('./features/boutique/boutique-page').then((m) => m.BoutiquePage),
+			import('./features/agenda/agenda-page').then((m) => m.AgendaPage),
+	},
+	{
+		path: 'informations',
+		loadComponent: () =>
+			import('./features/informations/informations-page').then(
+				(m) => m.InformationsPage,
+			),
+	},
+	{
+		path: 'inscription',
+		loadComponent: () =>
+			import('./features/inscription/inscription-page').then(
+				(m) => m.InscriptionPage,
+			),
 	},
 	{
 		path: 'contact',

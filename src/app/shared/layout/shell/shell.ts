@@ -35,11 +35,13 @@ export class Shell {
 
   // Single source of truth for side navigation entries.
   readonly navItems = [
-    { label: 'Accueil', icon: 'home', route: '/' },
-    { label: 'Le Club', icon: 'groups', route: '/club' },
-    { label: 'Entraînements', icon: 'directions_run', route: '/entrainements' },
-    { label: 'Compétitions', icon: 'emoji_events', route: '/competitions' },
-    { label: 'Boutique', icon: 'shopping_bag', route: '/boutique' },
-    { label: 'Contact', icon: 'mail', route: '/contact' },
+    { label: 'ACCUEIL', icon: 'home', route: '/' },
+    { label: 'LE CLUB', icon: 'groups', route: '/club' },
+    { label: 'ENTRAÎNEMENTS', icon: 'directions_run', route: '/entrainements' },
+    { label: 'COMPÉTITIONS', icon: 'emoji_events', route: '/competitions' },
+    { label: 'AGENDA', icon: 'event', route: '/agenda' },
+    { label: 'INFORMATIONS PRATIQUES', icon: 'fact_check', route: '/informations' },
+    { label: "S'INSCRIRE", icon: 'person_add', route: '/inscription' },
+    { label: 'CONTACT', icon: 'mail', route: '/contact' }
   ];
 }

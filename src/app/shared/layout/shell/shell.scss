@@ -60,9 +60,10 @@
 }
 
 .sidenav {
-  width: 208px;
+  width: 250px;
   background-color: #455f8c;
   font-family: Verdana, Geneva, sans-serif;
+  font-size: 0.92rem;
 
   --mdc-list-list-item-label-text-color: #fffefb;
   --mdc-list-list-item-leading-icon-color: #fffefb;
@@ -70,6 +71,21 @@
 
   .mat-mdc-nav-list {
     padding-top: 124px;
+  }
+
+  /* Let long labels wrap instead of being clipped. */
+  .mdc-list-item__primary-text {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.2;
+  }
+
+  .mat-mdc-list-item {
+    min-height: 44px;
+    height: auto;
+    align-items: flex-start;
+    padding-top: 6px;
+    padding-bottom: 6px;
   }
 }
 
@@ -107,25 +123,6 @@
   }
 }
 
-@media (max-width: 1200px) and (min-width: 901px) {
-  .topbar-logo-left {
-    height: 164px;
-    left: 84px;
-    top: 8px;
-  }
-
-  .topbar-logo-right {
-    height: 62px;
-  }
-
-  .topbar-title {
-    left: 54%;
-    font-size: clamp(1.1rem, 2vw, 1.35rem);
-    white-space: normal;
-    line-height: 1.15;
-    max-width: min(56vw, 560px);
-  }
-}
 
 @media (max-width: 1024px) {
   .topbar {
@@ -139,12 +136,9 @@
   }
 
   .topbar-logo-left {
-    grid-column: 1;
-    position: static;
-    transform: none;
-    height: 64px;
-    flex: none;
-    margin-left: 4px;
+    height: 130px;
+    left: 84px;
+    top: 8px;
   }
 
   .topbar-logo-right {
@@ -175,10 +169,10 @@
   }
 
   .sidenav {
-    width: clamp(172px, 24vw, 216px);
+    width: clamp(182px, 25vw, 226px);
 
     .mat-mdc-nav-list {
-      padding-top: 20px;
+      padding-top: 100px;
     }
   }
 
@@ -192,7 +186,12 @@
   .page {
     padding: 20px 14px 16px 16px;
   }
+  .sidenav .mat-mdc-list-item .mdc-list-item__primary-text {
+    font-size: 0.80rem;
+    line-height: 1.15;
+  }
 }
+
 
 @media (max-width: 768px) {
   .topbar {
@@ -211,6 +210,9 @@
   }
 
   .topbar-logo-left {
+    position: static;
+    transform: none;
+    flex: none;
     grid-column: 2;
     height: 52px;
     margin-left: 0;
@@ -231,6 +233,9 @@
 
   .sidenav {
     width: min(76vw, 280px);
+    .mat-mdc-nav-list {
+      padding-top: 20px;
+    }
   }
 
   .content {
