@@ -1,16 +1,18 @@
 <section class="page">
-  <h2>Informations pratiques</h2>
+  <div class="page-content">
+    <h2>Informations pratiques</h2>
 
-  <div class="cards-list">
-    @for (card of articleCards; track card.title) {
-      <app-article-card
-        [title]="card.title"
-        [articleText]="card.articleText"
-        [imageSrc]="card.imageSrc"
-        [imageAlt]="card.imageAlt"
-        [link]="card.link"
-        [buttonLabel]="card.buttonLabel"
-      />
-    }
+    <div class="cards-list">
+      @for (card of articleCards; track card.title) {
+        <app-article-card
+          [title]="card.title"
+          [articleText]="card.articleText"
+          [imageSrc]="card.imageSrc"
+          [imageAlt]="card.imageAlt"
+          [link]="card.link"
+          [buttonLabel]="card.buttonLabel"
+        />
+      }
+    </div>
   </div>
 </section>

@@ -40,7 +40,15 @@
     </mat-sidenav>
 
     <mat-sidenav-content class="content">
-      <router-outlet />
+      <main class="content-main" aria-label="Contenu principal">
+        <router-outlet />
+      </main>
+
+      <footer class="app-footer" aria-label="Pied de page">
+        <a routerLink="/mentions-legales-confidentialite">
+          Mentions légales et confidentialité
+        </a>
+      </footer>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>

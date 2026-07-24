@@ -56,6 +56,13 @@ export const routes: Routes = [
     loadComponent: () => import('./features/contact/contact-page').then((m) => m.ContactPage),
   },
   {
+    path: 'mentions-legales-confidentialite',
+    loadComponent: () =>
+      import('./features/mentions-legales-confidentialite/mentions-legales-confidentialite-page').then(
+        (m) => m.MentionsLegalesConfidentialitePage,
+      ),
+  },
+  {
     path: '**',
     redirectTo: '',
   },

@@ -95,14 +95,65 @@
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
   background-color: #fffefb;
   border-top: 4px solid #ff7f4a;
   border-left: 4px solid #ff7f4a;
   border-top-left-radius: 200px;
   border-top-right-radius: 0;
-  min-height: 0;
+  min-height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+.content-main {
+  flex: 1 0 auto;
+}
+
+.app-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 16px 24px;
+  margin-top: auto;
+  border-top: 1px solid #d4e1f3;
+  background: linear-gradient(180deg, #ffffff 0%, #f3f8ff 100%);
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid #aac4e8;
+    background-color: #e8f1ff;
+    color: #224a82;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 0.92rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1.5px;
+    transition:
+      background-color 180ms ease,
+      border-color 180ms ease,
+      color 180ms ease,
+      transform 180ms ease;
+  }
+
+  a:hover {
+    background-color: #d8e8ff;
+    border-color: #8eb3e0;
+    color: #173969;
+    transform: translateY(-1px);
+  }
+
+  a:focus-visible {
+    outline: 3px solid #ffb089;
+    outline-offset: 2px;
+  }
 }
 
 .sidenav a,
@@ -184,9 +235,6 @@
     border-top-right-radius: 0;
   }
 
-  .page {
-    padding: 20px 14px 16px 16px;
-  }
   .sidenav .mat-mdc-list-item .mdc-list-item__primary-text {
     font-size: 0.8rem;
     line-height: 1.15;
@@ -258,5 +306,16 @@
   .topbar-title {
     font-size: 0.8rem;
     line-height: 1.1;
+  }
+
+  .app-footer {
+    padding: 16px 12px 20px;
+
+    a {
+      text-align: center;
+      font-size: 0.86rem;
+      line-height: 1.35;
+      padding: 8px 12px;
+    }
   }
 }

@@ -25,3 +25,26 @@ body {
   font-family: Verdana, Geneva, sans-serif;
   background-color: #fffefb;
 }
+
+.page {
+  min-height: 100%;
+  padding: 52px 120px 24px 120px;
+  box-sizing: border-box;
+}
+
+.page-content {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .page {
+    padding: 32px 72px 16px 72px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 20px 14px 14px 20px;
+  }
+}
