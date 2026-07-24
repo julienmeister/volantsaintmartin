@@ -1,4 +1,23 @@
 <section class="page">
-  <h2>Competitions</h2>
-  <p>Contenu en preparation pour le calendrier, les resultats et les equipes engagees.</p>
+  <h2>Compétitions</h2>
+
+  <div class="intro">
+    <p>
+      Retrouvez ici les informations sur les interclubs, les tournois internes et les tournois
+      externes proposés tout au long de la saison.
+    </p>
+  </div>
+
+  <div class="cards-list">
+    @for (card of articleCards; track card.title) {
+      <app-article-card
+        [title]="card.title"
+        [articleText]="card.articleText"
+        [imageSrc]="card.imageSrc"
+        [imageAlt]="card.imageAlt"
+        [link]="card.link"
+        [buttonLabel]="card.buttonLabel"
+      />
+    }
+  </div>
 </section>

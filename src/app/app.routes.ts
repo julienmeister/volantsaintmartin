@@ -24,6 +24,13 @@ export const routes: Routes = [
       import('./features/competitions/competitions-page').then((m) => m.CompetitionsPage),
   },
   {
+    path: 'competitions/articles/:slug',
+    loadComponent: () =>
+      import('./features/competitions/competitions-article-page').then(
+        (m) => m.CompetitionsArticlePage,
+      ),
+  },
+  {
     path: 'agenda',
     loadComponent: () => import('./features/agenda/agenda-page').then((m) => m.AgendaPage),
   },
