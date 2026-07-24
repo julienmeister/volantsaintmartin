@@ -30,7 +30,7 @@ export class QuestionsFrequentesArticle {
     },
     {
       question: 'Il y a t-il des entraînements dirigés ?',
-      answerHtml: 'Oui, le jeudi ou le samedi, une semaine sur 2.',
+      answerHtml: 'Oui, le dimanche matin de 11h30 à 13h',
     },
     {
       question: "Puis-je venir plus d'une fois dans la semaine ?",
