@@ -41,3 +41,23 @@ p {
     top: 0.05em;
     font-size: 1em;
 }
+
+.check-list li > a {
+  color: #1f4f92;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 2px;
+  transition: color 0.18s ease, background-color 0.18s ease;
+}
+
+.check-list li > a:hover {
+  color: #123666;
+  background-color: #e9f1ff;
+}
+
+.check-list li > a:focus-visible {
+  outline: 2px solid #123666;
+  outline-offset: 2px;
+  border-radius: 3px;
+}
