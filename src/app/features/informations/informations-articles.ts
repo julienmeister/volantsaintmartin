@@ -29,7 +29,7 @@ export const INFORMATIONS_ARTICLES: InformationsArticle[] = [
   {
     slug: 'partenaires',
     title: 'Partenaires',
-    imageSrc: 'images/logo.png',
+    imageSrc: 'images/logo-name.png',
     imageAlt: 'Partenaires du club',
     previewText: PARTENAIRES_INTRO,
     component: PartenairesArticle,
