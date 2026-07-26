@@ -25,7 +25,7 @@ export const COMPETITIONS_ARTICLES: CompetitionsArticle[] = [
   {
     slug: 'interclubs',
     title: 'Interclubs',
-    imageSrc: 'images/logo-name.png',
+    imageSrc: 'images/articles/interclubs.png',
     imageAlt: 'Interclubs du Volant Saint Martin',
     previewText: INTERCLUBS_INTRO,
     component: InterclubsArticle,
@@ -33,7 +33,7 @@ export const COMPETITIONS_ARTICLES: CompetitionsArticle[] = [
   {
     slug: 'tournoi-interne',
     title: 'Tournois internes',
-    imageSrc: 'images/logo-name.png',
+    imageSrc: 'images/articles/tournoi_int.png',
     imageAlt: 'Tournois internes du Volant Saint Martin',
     previewText: TOURNOI_INTERNE_INTRO,
     component: TournoiInterneArticle,
@@ -41,7 +41,7 @@ export const COMPETITIONS_ARTICLES: CompetitionsArticle[] = [
   {
     slug: 'tournoi-externe',
     title: 'Tournois externes',
-    imageSrc: 'images/logo-name.png',
+    imageSrc: 'images/articles/tournoi_ext.png',
     imageAlt: 'Tournois externes du Volant Saint Martin',
     previewText: TOURNOI_EXTERNE_INTRO,
     component: TournoiExterneArticle,
