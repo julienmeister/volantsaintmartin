@@ -22,7 +22,7 @@ export const CLUB_ARTICLES: ClubArticle[] = [
   {
     slug: 'notre-histoire',
     title: 'Notre histoire',
-    imageSrc: 'images/logo-name.png',
+    imageSrc: 'images/articles/histoire.jpeg',
     imageAlt: 'Logo du Volant Saint Martin',
     previewText: NOTRE_HISTOIRE_INTRO,
     component: NotreHistoireArticle,
