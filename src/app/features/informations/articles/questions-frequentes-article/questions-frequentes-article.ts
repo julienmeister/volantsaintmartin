@@ -35,7 +35,7 @@ export class QuestionsFrequentesArticle {
     {
       question: "Puis-je venir plus d'une fois dans la semaine ?",
       answerHtml:
-        'Oui, tous les <u><a href="/agenda">creneaux</a></u> sont ouverts, sans reservation au prealable.',
+        'Oui, tous les <u><a href="agenda">creneaux</a></u> sont ouverts, sans reservation au prealable.',
     },
     {
       question: "Mon enfant souhaite faire du badminton, puis-je l'inscrire ?",
@@ -49,7 +49,7 @@ export class QuestionsFrequentesArticle {
     {
       question: 'Pratiquez-vous en compétition ?',
       answerHtml:
-        'Oui, nous avons une équipe d\'<u><a href="/competitions">interclub</a></u>, nous organisons deux <u><a href="/competitions">tournois</a></u> internes sur la saison et certains adherents vont également faire des tournois sur la région toulousaine.',
+        'Oui, nous avons une équipe d\'<u><a href="competitions/articles/interclubs">interclub</a></u>, nous organisons deux <u><a href="competitions/articles/tournoi-interne">tournois</a></u> internes sur la saison et certains adherents vont également faire des tournois sur la région toulousaine.',
     },
     {
       question: 'Dois-je avoir mon équipement pour jouer ?',
