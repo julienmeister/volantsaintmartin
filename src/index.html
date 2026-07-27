@@ -5,6 +5,22 @@
     <title>Volantsaintmartin</title>
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      // Restaure l'URL réelle après la redirection de 404.html sur GitHub Pages.
+      (function (locationData) {
+        if (locationData.search[1] === '/') {
+          var decodedPath = locationData.search
+            .slice(1)
+            .split('&')
+            .map(function (part) {
+              return part.replace(/~and~/g, '&');
+            })
+            .join('?');
+
+          window.history.replaceState(null, '', locationData.pathname.slice(0, -1) + decodedPath + locationData.hash);
+        }
+      })(window.location);
+    </script>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
