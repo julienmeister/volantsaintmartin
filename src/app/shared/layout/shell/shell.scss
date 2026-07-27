@@ -33,6 +33,8 @@
   transform: translateX(-40%);
   top: 15px;
   z-index: 20;
+  cursor: pointer;
+  transition: opacity 180ms ease;
 }
 
 .topbar-logo-right {
@@ -40,6 +42,13 @@
   width: auto;
   margin-left: auto;
   align-self: center;
+  cursor: pointer;
+  transition: opacity 180ms ease;
+}
+
+.topbar-logo-left:hover,
+.topbar-logo-right:hover {
+  opacity: 0.88;
 }
 
 .topbar-title {
