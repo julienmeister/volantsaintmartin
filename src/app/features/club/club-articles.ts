@@ -30,7 +30,7 @@ export const CLUB_ARTICLES: ClubArticle[] = [
   {
     slug: 'organisation-des-creneaux',
     title: 'Organisation des créneaux',
-    imageSrc: 'images/logo-name.png',
+    imageSrc: 'images/articles/crenaux.png',
     imageAlt: 'Terrain de badminton',
     previewText: ORGANISATION_CRENEAUX_INTRO,
     component: OrganisationCreneauxArticle,
@@ -38,7 +38,7 @@ export const CLUB_ARTICLES: ClubArticle[] = [
   {
     slug: 'le-bureau',
     title: 'Le bureau',
-    imageSrc: 'images/logo-name.png',
+    imageSrc: 'images/articles/bureau.png',
     imageAlt: 'Membres du bureau',
     previewText: LE_BUREAU_INTRO,
     component: LeBureauArticle,
