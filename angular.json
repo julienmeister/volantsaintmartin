@@ -27,7 +27,7 @@
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "baseHref": "/volantsaintmartin/",
+            "baseHref": "/",
             "assets": [
               {
                 "glob": "**/*",
