@@ -3,10 +3,34 @@
 }
 
 .page {
-  p {
+  p,
+  ul {
     max-width: 75ch;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  ul {
+    margin: 0 auto 1.5rem;
+    padding-left: 1rem;
+    list-style: disc;
+    list-style-position: inside;
+  }
+
+  li {
+    margin-bottom: 0.4rem;
+  }
+
+  li:last-child {
+    margin-bottom: 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  .section-title {
+    margin-bottom: 0.55rem;
   }
 }
 
