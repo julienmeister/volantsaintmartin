@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.badminton-saint-martin.com/sitemap.xml
