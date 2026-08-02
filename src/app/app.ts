@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { SeoComponent } from './core/seo';
 import { Shell } from './shared/layout/shell/shell';
 
 @Component({
   selector: 'app-root',
-  imports: [Shell],
+  imports: [SeoComponent, Shell],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })

@@ -5,13 +5,17 @@
   RewriteCond %{HTTPS} !=on
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+  # Canonical host: redirect www to apex domain.
+  RewriteCond %{HTTP_HOST} ^www\.badminton-saint-martin\.com$ [NC]
+  RewriteRule ^ https://badminton-saint-martin.com%{REQUEST_URI} [L,R=301]
+
   RewriteBase /
 
-  # Let Apache serve existing files and folders directly.
+  # Serve existing files and directories as-is.
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
-
-  # All other routes are handled by Angular.
-  RewriteRule ^ index.html [L]
 </IfModule>
+
+# Return an explicit static 404 page for unknown URLs.
+ErrorDocument 404 /404.html

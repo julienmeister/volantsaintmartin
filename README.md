@@ -1,59 +1,101 @@
 # Volantsaintmartin
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.7.
+Application Angular 22 avec rendu SSR + prerender SEO-first.
 
-## Development server
-
-To start a local development server, run:
+## Scripts utiles
 
 ```bash
-ng serve
+npm start
+npm run build
+npm run build:ssr
+npm run build:prerender
+npm run serve:ssr
+npm run lint
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Architecture de rendu
 
-## Code scaffolding
+- Routing applicatif: `src/app/app.routes.ts`
+- Routing serveur SSR/prerender: `src/app/app.routes.server.ts`
+- Bootstrap client: `src/main.ts`
+- Bootstrap serveur: `src/main.server.ts`
+- Configuration client: `src/app/app.config.ts`
+- Configuration serveur: `src/app/app.config.server.ts`
+- Entrée Node SSR: `src/server.ts`
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Le SEO est géré de façon centralisée et s'applique côté serveur dès le HTML initial.
+
+## Prerender configuré
+
+Routes statiques pré-générées:
+
+- `/`
+- `/club`
+- `/entrainements`
+- `/competitions`
+- `/agenda`
+- `/informations`
+- `/inscription`
+- `/contact`
+- `/mentions-legales-confidentialite`
+
+Routes dynamiques pré-générées via paramètres connus:
+
+- `/club/articles/:slug`
+- `/competitions/articles/:slug`
+- `/informations/articles/:slug`
+
+Les slugs sont fournis depuis les datasets d'articles dans `src/app/features/**/**-articles.ts`.
+
+## 404 et SEO
+
+- Côté app: `NotFoundPage` (route `**`) en `noindex,nofollow`
+- Côté SSR: réponse HTTP 404 pour toute route inconnue (server route `**`)
+- Côté Apache statique: `ErrorDocument 404 /404.html`
+
+## Déploiement OVH Apache
+
+Mode recommandé (mutualisé sans Node): prerender statique.
+
+1. Générer:
 
 ```bash
-ng generate component component-name
+npm run build:prerender
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+2. Déployer le contenu de `dist/volantsaintmartin/browser/`.
+
+3. Conserver le fichier `.htaccess` fourni (HTTPS + host canonique + vraie 404).
+
+Mode alternatif (serveur Node disponible): SSR runtime.
+
+1. Générer:
 
 ```bash
-ng generate --help
+npm run build:ssr
 ```
 
-## Building
-
-To build the project run:
+2. Lancer:
 
 ```bash
-ng build
+npm run serve:ssr
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+3. Reverse proxy Apache/Nginx vers le process Node.
 
-## Running unit tests
+## Vérifications SEO rapides
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+En local, vérifier le HTML brut (sans JS) avec `curl`:
 
 ```bash
-ng test
+curl -sS -D - http://localhost:4300/club
 ```
 
-## Running end-to-end tests
+Contrôler la présence de:
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- `<title>`
+- `<meta name="description">`
+- `<link rel="canonical">`
+- OpenGraph (`og:title`, `og:description`, `og:url`)
+- Twitter Cards
+- JSON-LD

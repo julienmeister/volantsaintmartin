@@ -2,96 +2,12 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <title>Volant Saint Martin Badminton</title>
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Volant Saint Martin Badminton: club, entrainements, competitions, agenda, inscription et informations pratiques."
-    />
-    <meta name="robots" content="index,follow,max-image-preview:large" />
-    <meta property="og:site_name" content="Volant Saint Martin Badminton" />
-    <meta property="og:title" content="Volant Saint Martin Badminton" />
-    <meta
-      property="og:description"
-      content="Decouvrez le club, les entrainements, les competitions, l'agenda et les informations d'inscription."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="images/logo.png" />
-    <script>
-      // Restaure l'URL réelle après la redirection de 404.html sur GitHub Pages.
-      (function (locationData) {
-        if (locationData.search[1] === '/') {
-          var decodedPath = locationData.search
-            .slice(1)
-            .split('&')
-            .map(function (part) {
-              return part.replace(/~and~/g, '&');
-            })
-            .join('?');
-
-          window.history.replaceState(null, '', locationData.pathname.slice(0, -1) + decodedPath + locationData.hash);
-        }
-      })(window.location);
-    </script>
-    <script>
-      // Ajoute des donnees structurees (JSON-LD) pour aider les moteurs a comprendre les sections principales du site.
-      (function () {
-        var origin = window.location.origin;
-        var data = {
-          '@context': 'https://schema.org',
-          '@graph': [
-            {
-              '@type': 'WebSite',
-              name: 'Volant Saint Martin Badminton',
-              url: origin + '/',
-              inLanguage: 'fr-FR',
-            },
-            {
-              '@type': 'ItemList',
-              name: 'Sections principales',
-              itemListElement: [
-                { '@type': 'SiteNavigationElement', position: 1, name: 'Club', url: origin + '/club' },
-                {
-                  '@type': 'SiteNavigationElement',
-                  position: 2,
-                  name: 'Entrainements',
-                  url: origin + '/entrainements',
-                },
-                {
-                  '@type': 'SiteNavigationElement',
-                  position: 3,
-                  name: 'Competitions',
-                  url: origin + '/competitions',
-                },
-                { '@type': 'SiteNavigationElement', position: 4, name: 'Agenda', url: origin + '/agenda' },
-                {
-                  '@type': 'SiteNavigationElement',
-                  position: 5,
-                  name: 'Informations',
-                  url: origin + '/informations',
-                },
-                {
-                  '@type': 'SiteNavigationElement',
-                  position: 6,
-                  name: 'Inscription',
-                  url: origin + '/inscription',
-                },
-                { '@type': 'SiteNavigationElement', position: 7, name: 'Contact', url: origin + '/contact' },
-              ],
-            },
-          ],
-        };
-
-        var script = document.createElement('script');
-        script.type = 'application/ld+json';
-        script.text = JSON.stringify(data);
-        document.head.appendChild(script);
-      })();
-    </script>
-    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png" />
-    <link rel="shortcut icon" href="images/logo.png" />
-    <link rel="apple-touch-icon" href="images/logo.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/images/logo.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/logo.png" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

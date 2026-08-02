@@ -2,26 +2,47 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <title>Redirection...</title>
-    <script>
-      // Redirection SPA pour GitHub Pages (repo project pages: /volantsaintmartin/)
-      // segmentCount = 1 car l'application est servie sous /volantsaintmartin/
-      var segmentCount = 1;
-      var locationData = window.location;
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>404 | Volant Saint Martin Badminton</title>
+    <meta name="robots" content="noindex,nofollow" />
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: Roboto, sans-serif;
+        background: #f7f7f9;
+        color: #1d1d1f;
+      }
 
-      var redirectUrl =
-        locationData.protocol +
-        '//' +
-        locationData.hostname +
-        (locationData.port ? ':' + locationData.port : '') +
-        locationData.pathname.split('/').slice(0, 1 + segmentCount).join('/') +
-        '/?/' +
-        locationData.pathname.slice(1).split('/').slice(segmentCount).join('/').replace(/&/g, '~and~') +
-        (locationData.search ? '&' + locationData.search.slice(1).replace(/&/g, '~and~') : '') +
-        locationData.hash;
+      main {
+        max-width: 680px;
+        padding: 2rem 1.25rem;
+        text-align: center;
+      }
 
-      locationData.replace(redirectUrl);
-    </script>
+      h1 {
+        margin-bottom: 0.5rem;
+        font-size: 2rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+
+      a {
+        color: #0a7f3f;
+        text-decoration: none;
+        font-weight: 600;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <h1>Page introuvable</h1>
+      <p>La page demandee est introuvable sur le site du Volant Saint Martin Badminton.</p>
+      <a href="/">Retour a l'accueil</a>
+    </main>
+  </body>
 </html>
