@@ -114,3 +114,14 @@ h2 {
   margin: 0 0 12px;
   color: #455f8c;
 }
+
+a {
+  color: #2f5d9f;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+}
