@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 export const TOURNOI_EXTERNE_INTRO =
-  "Tout au long de la saison auront lieu des tournois externes. La liste de ces tournois est consultable sur le site badnet";
+  'Tout au long de la saison auront lieu des tournois externes. La liste de ces tournois est consultable sur le site badnet';
 
 @Component({
   selector: 'app-tournoi-externe-article',

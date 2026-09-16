@@ -3,7 +3,8 @@
 }
 
 .page {
-  p, li {
+  p,
+  li {
     max-width: 75ch;
     margin-left: auto;
     margin-right: auto;
@@ -16,8 +17,8 @@ h2 {
   margin: 0 0 12px;
   color: #455f8c;
 }
-ul{
-    margin: 0 0 1.5rem;
+ul {
+  margin: 0 0 1.5rem;
 }
 
 p {
@@ -25,21 +26,21 @@ p {
   color: #2d2d2d;
 }
 .check-list {
-    list-style: none;
-    padding-left: 0;
+  list-style: none;
+  padding-left: 0;
 }
 
 .check-list li {
-    position: relative;
-    padding-left: 2em; /* espace entre la case et le texte */
+  position: relative;
+  padding-left: 2em; /* espace entre la case et le texte */
 }
 
 .check-list li::before {
-    content: "☐";
-    position: absolute;
-    left: 10px;      /* décale la case vers la droite */
-    top: 0.05em;
-    font-size: 1em;
+  content: '☐';
+  position: absolute;
+  left: 10px; /* décale la case vers la droite */
+  top: 0.05em;
+  font-size: 1em;
 }
 
 .check-list li > a {
@@ -48,7 +49,9 @@ p {
   text-decoration: underline;
   text-underline-offset: 0.18em;
   text-decoration-thickness: 2px;
-  transition: color 0.18s ease, background-color 0.18s ease;
+  transition:
+    color 0.18s ease,
+    background-color 0.18s ease;
 }
 
 .check-list li > a:hover {

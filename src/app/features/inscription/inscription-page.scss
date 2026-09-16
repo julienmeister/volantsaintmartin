@@ -8,7 +8,8 @@
     margin: 0 auto 2rem;
   }
 
-  p, ul {
+  p,
+  ul {
     max-width: 68ch;
     margin: 0 auto;
     color: #2d2d2d;
@@ -32,9 +33,7 @@
     border-radius: 20px;
     text-decoration: none;
     color: inherit;
-    background:
-      linear-gradient(160deg, rgba(69, 95, 140, 0.12), rgba(69, 95, 140, 0.03)),
-      #ffffff;
+    background: linear-gradient(160deg, rgba(69, 95, 140, 0.12), rgba(69, 95, 140, 0.03)), #ffffff;
     border: 1px solid rgba(69, 95, 140, 0.15);
     box-shadow: 0 14px 32px rgba(45, 45, 45, 0.08);
     transition:

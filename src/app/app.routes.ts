@@ -226,7 +226,8 @@ export const routes: Routes = [
     data: {
       seo: {
         title: 'Page introuvable',
-        description: 'La page demandee est introuvable sur le site du Volant Saint Martin Badminton.',
+        description:
+          'La page demandee est introuvable sur le site du Volant Saint Martin Badminton.',
         noIndex: true,
         noFollow: true,
         robots: 'noindex,nofollow',

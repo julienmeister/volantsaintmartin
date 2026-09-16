@@ -11,7 +11,12 @@ import {
   SEO_SITE_NAME,
 } from './seo.constants';
 import { JsonLdNode, SeoConfig } from './seo-config';
-import { buildCanonicalFromUrl, buildFullTitle, toAbsoluteUrl, truncateDescription } from './seo.helpers';
+import {
+  buildCanonicalFromUrl,
+  buildFullTitle,
+  toAbsoluteUrl,
+  truncateDescription,
+} from './seo.helpers';
 
 @Injectable({ providedIn: 'root' })
 export class SeoService {
@@ -44,13 +49,19 @@ export class SeoService {
     this.meta.updateTag({ name: 'twitter:image', content: normalizedConfig.image });
 
     if (normalizedConfig.publishedTime) {
-      this.meta.updateTag({ property: 'article:published_time', content: normalizedConfig.publishedTime });
+      this.meta.updateTag({
+        property: 'article:published_time',
+        content: normalizedConfig.publishedTime,
+      });
     } else {
       this.meta.removeTag("property='article:published_time'");
     }
 
     if (normalizedConfig.modifiedTime) {
-      this.meta.updateTag({ property: 'article:modified_time', content: normalizedConfig.modifiedTime });
+      this.meta.updateTag({
+        property: 'article:modified_time',
+        content: normalizedConfig.modifiedTime,
+      });
     } else {
       this.meta.removeTag("property='article:modified_time'");
     }
@@ -59,8 +70,21 @@ export class SeoService {
     this.updateJsonLd(normalizedConfig.jsonLd);
   }
 
-  private normalizeConfig(config: SeoConfig): Required<
-    Pick<SeoConfig, 'title' | 'description' | 'canonical' | 'image' | 'type' | 'robots' | 'keywords' | 'author' | 'twitterCard'>
+  private normalizeConfig(
+    config: SeoConfig,
+  ): Required<
+    Pick<
+      SeoConfig,
+      | 'title'
+      | 'description'
+      | 'canonical'
+      | 'image'
+      | 'type'
+      | 'robots'
+      | 'keywords'
+      | 'author'
+      | 'twitterCard'
+    >
   > &
     Pick<SeoConfig, 'publishedTime' | 'modifiedTime' | 'jsonLd'> {
     const canonical = config.canonical
@@ -76,7 +100,9 @@ export class SeoService {
       canonical,
       image: toAbsoluteUrl(config.image ?? SEO_DEFAULT_IMAGE, SEO_BASE_URL),
       type: config.type ?? 'website',
-      robots: config.robots ?? `${shouldNoIndex ? 'noindex' : 'index'},${shouldNoFollow ? 'nofollow' : 'follow'}`,
+      robots:
+        config.robots ??
+        `${shouldNoIndex ? 'noindex' : 'index'},${shouldNoFollow ? 'nofollow' : 'follow'}`,
       keywords: config.keywords ?? SEO_DEFAULT_KEYWORDS,
       author: config.author ?? SEO_SITE_NAME,
       twitterCard: config.twitterCard ?? 'summary_large_image',
@@ -93,7 +119,10 @@ export class SeoService {
     }
 
     if (isPlatformBrowser(this.platformId) && this.document.location) {
-      return buildCanonicalFromUrl(this.document.location.pathname + this.document.location.search, SEO_BASE_URL);
+      return buildCanonicalFromUrl(
+        this.document.location.pathname + this.document.location.search,
+        SEO_BASE_URL,
+      );
     }
 
     return `${SEO_BASE_URL}/`;
