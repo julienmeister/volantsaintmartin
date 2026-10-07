@@ -1,37 +1,28 @@
 <section class="page">
   <h2>Accueil</h2>
-  <p>Bonjour et bienvenue au Volant Saint Martin ! 🏸</p>
-  <p>20 ans de passion, de smashs et de convivialité !</p>
-  <p>
-    Cette année est particulièrement spéciale pour notre club : le Volant Saint Martin fête ses 20
-    ans ! Deux décennies à partager le même amour du badminton, à célébrer des victoires et,
-    surtout, à cultiver cet esprit club chaleureux qui nous tient tant à cœur.
-  </p>
-  <p>Un nouveau look pour une nouvelle saison 🚀</p>
-  <p>
-    Pour marquer cet anniversaire symbolique, nous avons décidé de donner un coup de neuf à notre
-    site internet. Un immense merci à Julien qui a accepté de mettre tout cela sur pied !
-  </p>
-  <p>Plus moderne, plus fluide, il a été pensé pour vous accompagner tout au long de l'année :</p>
-  <ul class="check-list">
-    <li>
-      <a routerLink="/informations">Informations pratiques</a> : Retrouvez une FAQ, le
-      fonctionnement du club et nos partenaires
-    </li>
-    <li>
-      <a routerLink="/inscription">S'inscrire</a> : Accédez directement aux démarches, documents et
-      modalités d'adhésion pour la nouvelle saison.
-    </li>
-    <li>
-      <a routerLink="/agenda">Agenda</a> : Ne manquez aucun événement à venir — tournois,
-      rassemblements, rencontres interclubs et moments festifs du club !
-    </li>
-  </ul>
-  <p>
-    Que vous soyez un(e) joueur (joueuse) confirmé(e) à la recherche de compétition, une personne
-    souhaitant garder la forme, ou simplement curieux de découvrir le badminton dans une ambiance
-    conviviale, vous êtes au bon endroit ! 😀
-  </p>
-  <p>C’est parti pour cette nouvelle année et rendez-vous pour les 30 ans !</p>
-  <p>L'équipe du Volant Saint Martin</p>
+  <p>Bonjour à toutes et tous !</p>
+
+<p>Ça y est, la saison est officiellement lancée ! Une fois de plus, le club a affiché complet en un temps record : plus de 60 % de réinscriptions, et les 25 places réservées aux nouveaux adhérents ont été attribuées dès le premier jour.</p>
+
+<p>Un grand merci aux anciens pour leur fidélité — preuve que l’ambiance au sein du club reste toujours aussi conviviale au fil des ans.
+Nous souhaitons également la bienvenue aux nouveaux et nouvelles qui nous rejoignent cette année. Nous espérons que vous y trouverez votre compte, tant sur le terrain côté jeu qu'en dehors côté convivialité !</p>
+
+<p>Cette saison sera aussi placée sous le signe de la compétition : nous engageons cette année trois équipes d’interclubs mixte au niveau départemental. Les objectifs sont clairs : viser la montée, mais surtout prendre du plaisir et partager de beaux moments avec les clubs voisins&nbsp;!</p>
+
+<p>Excellente saison à toutes et à tous, et allez le VSM !</p>
+
+<p>Le bureau du Volant Saint Martin</p>
+
+<div class="cards-list">
+    @for (card of articleCards; track card.title) {
+      <app-article-card class="card"
+        [title]="card.title"
+        [articleText]="card.articleText"
+        [imageSrc]="card.imageSrc"
+        [imageAlt]="card.imageAlt"
+        [link]="card.link"
+        [buttonLabel]="card.buttonLabel"
+      />
+    }
+  </div>
 </section>

@@ -4,6 +4,7 @@ import { SeoConfig, buildArticleSeoConfig, truncateDescription } from './core/se
 import { getClubArticleBySlug } from './features/club/club-articles';
 import { getCompetitionsArticleBySlug } from './features/competitions/competitions-articles';
 import { getInformationsArticleBySlug } from './features/informations/informations-articles';
+import { getHomeArticleBySlug } from './features/home/home-articles';
 
 const clubArticleSeoResolver: ResolveFn<Partial<SeoConfig>> = (route) => {
   const slug = route.paramMap.get('slug') ?? '';
@@ -45,6 +46,26 @@ const competitionsArticleSeoResolver: ResolveFn<Partial<SeoConfig>> = (route) =>
   };
 };
 
+const homeArticleSeoResolver: ResolveFn<Partial<SeoConfig>> = (route) => {
+  const slug = route.paramMap.get('slug') ?? '';
+  const article = getHomeArticleBySlug(slug);
+
+  if (!article) {
+    return {
+      title: 'Article de l’accueil introuvable',
+      description: 'Cet article de l’accueil est introuvable.',
+      noIndex: true,
+      noFollow: true,
+      robots: 'noindex,nofollow',
+    };
+  }
+
+  return {
+    ...buildArticleSeoConfig(article, '/home/articles'),
+    description: truncateDescription(article.previewText),
+  };
+};
+
 const informationsArticleSeoResolver: ResolveFn<Partial<SeoConfig>> = (route) => {
   const slug = route.paramMap.get('slug') ?? '';
   const article = getInformationsArticleBySlug(slug);
@@ -74,6 +95,20 @@ export const routes: Routes = [
         title: 'Accueil',
         description:
           'Bienvenue au Volant Saint Martin Badminton: actualites du club, agenda, competitions, inscription et informations pratiques.',
+      } satisfies SeoConfig,
+    },
+  },
+    {
+    path: 'home/articles/:slug',
+    loadComponent: () => import('./features/home/home-article-page').then((m) => m.HomeArticlePage),
+    resolve: {
+      seoResolved: homeArticleSeoResolver,
+    },
+    data: {
+      seo: {
+        title: "Article de l'acceuil",
+        description: "Article de l'acceuil",
+        type: 'article',
       } satisfies SeoConfig,
     },
   },
