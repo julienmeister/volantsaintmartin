@@ -1,8 +1,5 @@
 import { Type } from '@angular/core';
-import {
-  ANNIVERSAIRE_INTRO,
-  AnniversaireArticle,
-} from './articles/20ans/20ans-article';
+import { ANNIVERSAIRE_INTRO, AnniversaireArticle } from './articles/20ans/20ans-article';
 
 export type HomeArticle = {
   slug: string;

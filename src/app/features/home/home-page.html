@@ -2,20 +2,34 @@
   <h2>Accueil</h2>
   <p>Bonjour à toutes et tous !</p>
 
-<p>Ça y est, la saison est officiellement lancée ! Une fois de plus, le club a affiché complet en un temps record : plus de 60 % de réinscriptions, et les 25 places réservées aux nouveaux adhérents ont été attribuées dès le premier jour.</p>
+  <p>
+    Ça y est, la saison est officiellement lancée ! Une fois de plus, le club a affiché complet en
+    un temps record : plus de 60 % de réinscriptions, et les 25 places réservées aux nouveaux
+    adhérents ont été attribuées dès le premier jour.
+  </p>
 
-<p>Un grand merci aux anciens pour leur fidélité — preuve que l’ambiance au sein du club reste toujours aussi conviviale au fil des ans.
-Nous souhaitons également la bienvenue aux nouveaux et nouvelles qui nous rejoignent cette année. Nous espérons que vous y trouverez votre compte, tant sur le terrain côté jeu qu'en dehors côté convivialité !</p>
+  <p>
+    Un grand merci aux anciens pour leur fidélité — preuve que l’ambiance au sein du club reste
+    toujours aussi conviviale au fil des ans. Nous souhaitons également la bienvenue aux nouveaux et
+    nouvelles qui nous rejoignent cette année. Nous espérons que vous y trouverez votre compte, tant
+    sur le terrain côté jeu qu'en dehors côté convivialité !
+  </p>
 
-<p>Cette saison sera aussi placée sous le signe de la compétition : nous engageons cette année trois équipes d’interclubs mixte au niveau départemental. Les objectifs sont clairs : viser la montée, mais surtout prendre du plaisir et partager de beaux moments avec les clubs voisins&nbsp;!</p>
+  <p>
+    Cette saison sera aussi placée sous le signe de la compétition : nous engageons cette année
+    trois équipes d’interclubs mixte au niveau départemental. Les objectifs sont clairs : viser la
+    montée, mais surtout prendre du plaisir et partager de beaux moments avec les clubs
+    voisins&nbsp;!
+  </p>
 
-<p>Excellente saison à toutes et à tous, et allez le VSM !</p>
+  <p>Excellente saison à toutes et à tous, et allez le VSM !</p>
 
-<p>Le bureau du Volant Saint Martin</p>
+  <p>Le bureau du Volant Saint Martin</p>
 
-<div class="cards-list">
+  <div class="cards-list">
     @for (card of articleCards; track card.title) {
-      <app-article-card class="card"
+      <app-article-card
+        class="card"
         [title]="card.title"
         [articleText]="card.articleText"
         [imageSrc]="card.imageSrc"

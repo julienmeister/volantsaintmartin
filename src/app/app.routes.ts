@@ -98,7 +98,7 @@ export const routes: Routes = [
       } satisfies SeoConfig,
     },
   },
-    {
+  {
     path: 'home/articles/:slug',
     loadComponent: () => import('./features/home/home-article-page').then((m) => m.HomeArticlePage),
     resolve: {
